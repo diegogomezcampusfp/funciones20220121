@@ -16,7 +16,7 @@ echo str_replace("a","e", "Hola" . "\n");
 setlocale(LC_ALL, "es_ES", 'Spanish_Spain', 'Spanish');
 $string = "21/01/2022";
 $date = DateTime::createFromFormat("d/m/Y", $string);
-echo strftime("%A",$date->getTimestamp());
+echo strftime("%B",$date->getTimestamp());
 //Función muestras PHP y Server
 phpinfo();
 //Función número primo
