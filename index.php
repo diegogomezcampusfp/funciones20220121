@@ -15,18 +15,19 @@
         echo $resultadoMayuscula;
     ?>
 
-    <h3>Reemplazar la a por la e</h3>
+<h3>Reemplazar una a por una e</h3>
     <?php
         require_once("libreria.php");
-        $resultadoReemplazar = reemplazar("a", "e");
+        $resultadoReemplazar=reemplazar("a", "e", "texto a reemplazar");
         echo $resultadoReemplazar;
     ?>
 
 <h3>Mostrar mes</h3>
     <?php
-        require_once("libreria.php");
-        $resultadoMes = mostrarMes("01/03/2022");
-        echo $resultadoMes;
+        setlocale(LC_ALL, "es_ES.UTF-8", 'Spanish_Spain', 'Spanish');
+        $string = "21/01/2022";
+        $date = DateTime::createFromFormat("d/m/Y", $string);
+        echo strftime("%B",$date->getTimestamp());
     ?>
 
 <h3>Mostrar info</h3>
